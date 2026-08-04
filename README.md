@@ -6,11 +6,11 @@ A clean, modern portfolio site showcasing 10+ years of experience building brand
 
 ## About
 
-I'm a crypto-native social media and marketing manager currently leading social strategy at [Risk Labs](https://risk.mirror.xyz/) for [Across Protocol](https://across.to/) and [UMA](https://umaproject.org/). My background spans community management, campaign strategy, content creation, and AI-assisted development.
+I'm a crypto-native social media and marketing manager who most recently led social strategy at [Risk Labs](https://risk.mirror.xyz/) for [Across Protocol](https://across.to/) and [UMA](https://umaproject.org/). My background spans community management, campaign strategy, content creation, and AI-assisted development.
 
 ## Experience
 
-- **Social Media Manager** at Risk Labs (Late 2024 – Present)
+- **Social Media Manager** at Risk Labs (Late 2024 – July 2026)
 - **Community Manager** at Risk Labs (April 2024 – Late 2024)
 - **Social Media Manager** at Degenda (Aug 2023 – Apr 2024)
 - **Marketing Manager** at New Order / Synonym Finance (May 2023 – Sep 2023)
