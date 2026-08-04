@@ -347,6 +347,52 @@
             margin-top: 0.5rem;
         }
 
+        .case-study {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 3rem;
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .case-study-block h4 {
+            color: #6DF8D9;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-block p,
+        .case-study-block li {
+            color: #d8dedc;
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        .case-study-block ul {
+            list-style: none;
+        }
+
+        .case-study-block li {
+            position: relative;
+            padding-left: 1.1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .case-study-block li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #6DF8D9;
+        }
+
         .founder-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -478,6 +524,11 @@
 
             .across-highlights {
                 grid-template-columns: 1fr;
+            }
+
+            .case-study {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .job-header {
@@ -640,6 +691,26 @@
                 <div class="across-highlight">Community manager of a Discord that grew from 10K to 70K members</div>
                 <div class="across-highlight">Managed DAO communications and proposals</div>
                 <div class="across-highlight">Led the mods team, community team, and ambassador program</div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-block">
+                    <h4>Challenge</h4>
+                    <p>Across and UMA needed to grow owned social and Discord audiences steadily over time, not just around one-off launches, while keeping community quality high enough to support DAO governance participation and long-term retention.</p>
+                </div>
+                <div class="case-study-block">
+                    <h4>Approach</h4>
+                    <ul>
+                        <li>Built and ran a structured ambassador program to extend reach through trusted community voices instead of relying on paid growth</li>
+                        <li>Recruited, trained, and led a dedicated mods team to keep Discord quality high as it scaled from 10K to 70K members</li>
+                        <li>Gave the community team clear ownership of engagement, support triage, and sentiment reporting so growth didn't outpace moderation capacity</li>
+                        <li>Coordinated ambassador and mod activity with DAO communications so community-led growth stayed aligned with governance and protocol updates</li>
+                    </ul>
+                </div>
+                <div class="case-study-block">
+                    <h4>Result</h4>
+                    <p>Sustained, compounding growth across Late 2024–July 2026: social following grew from 60K to 125K and Discord grew from 10K to 70K members, across 7+ platforms, without a single campaign carrying the growth — the ambassador and mod programs kept scaling reach and quality together throughout the tenure.</p>
+                </div>
             </div>
         </div>
     </section>
