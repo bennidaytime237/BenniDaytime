@@ -1,5 +1,5 @@
 name = "benjamin-day-portfolio"
-type = "javascript"
+compatibility_date = "2026-08-04"
 
-[env.production]
-vars = { ENVIRONMENT = "production" }
+[assets]
+directory = "."
