@@ -87,6 +87,51 @@
             border-color: #333;
         }
 
+        .pay-me {
+            margin-top: 2.2rem;
+        }
+
+        .pay-me h2 {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 0.9rem;
+        }
+
+        .pay-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .pay-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 1px solid #e5e5e5;
+            background: #fff;
+            transition: all 0.2s ease;
+        }
+
+        .pay-circle:hover {
+            background: #000;
+            border-color: #000;
+        }
+
+        .pay-circle svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .pay-circle:hover svg {
+            filter: brightness(0) invert(1);
+        }
+
         footer {
             margin-top: 3rem;
             color: #aaa;
@@ -111,6 +156,24 @@
             <a class="link" href="https://www.tiktok.com/@bennidaytime" target="_blank" rel="noopener noreferrer">TikTok</a>
             <a class="link" href="https://www.twitch.tv/bennidaytime" target="_blank" rel="noopener noreferrer">Twitch</a>
             <a class="link" href="mailto:benni@daytimex.com">Email</a>
+        </div>
+
+        <div class="pay-me">
+            <h2>Pay Me</h2>
+            <div class="pay-buttons">
+                <a class="pay-circle" href="https://wise.com/pay/me/benjamind1714" target="_blank" rel="noopener noreferrer" aria-label="Pay with Wise">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="11" stroke="#000" stroke-width="1.5"/>
+                        <path d="M12 5v14M15.5 8.5c0-1.38-1.57-2.5-3.5-2.5S8.5 7.12 8.5 8.5c0 1.38 1.57 2.09 3.5 2.5s3.5 1.12 3.5 2.5-1.57 2.5-3.5 2.5-3.5-1.12-3.5-2.5" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a class="pay-circle" href="https://www.sageonchain.xyz/send.html?to=0x2610a6dc27423831489842b0325e1dbcc6142408&amp;token=USDC&amp;chain=8453&amp;amount=1&amp;currency=usd&amp;usd=1" target="_blank" rel="noopener noreferrer" aria-label="Pay with USDC">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="11" stroke="#000" stroke-width="1.5"/>
+                        <text x="12" y="15.5" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing="-0.3" fill="#000" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">USDC</text>
+                    </svg>
+                </a>
+            </div>
         </div>
 
         <footer>
