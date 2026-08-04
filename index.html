@@ -275,6 +275,78 @@
             font-weight: 400;
         }
 
+        .across-section {
+            background: #0d1210;
+            color: #fff;
+        }
+
+        .across-section h2 {
+            color: #fff;
+        }
+
+        .across-section .section-subtitle {
+            text-align: center;
+            color: #9fb0ac;
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: -2rem auto 3rem;
+        }
+
+        .across-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .across-stat-box {
+            text-align: center;
+            padding: 2rem 1rem;
+            border: 1px solid rgba(109, 248, 217, 0.25);
+            border-radius: 8px;
+            background: rgba(109, 248, 217, 0.04);
+        }
+
+        .across-stat-number {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #6DF8D9;
+        }
+
+        .across-stat-label {
+            color: #9fb0ac;
+            font-size: 0.8rem;
+            margin-top: 0.6rem;
+            letter-spacing: 0.3px;
+        }
+
+        .across-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2.5rem;
+        }
+
+        .across-highlight {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            color: #d8dedc;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .across-highlight::before {
+            content: '';
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #6DF8D9;
+            margin-top: 0.5rem;
+        }
+
         .founder-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -375,6 +447,14 @@
                 font-size: 1.8rem;
             }
 
+            .across-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .across-highlights {
+                grid-template-columns: 1fr;
+            }
+
             .job-header {
                 flex-direction: column;
                 gap: 0.5rem;
@@ -415,7 +495,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Social Media Manager & Crypto Marketing Strategist</h1>
-            <p class="tagline">10+ years building brands, audiences, and communities across web3, DeFi, and consumer products</p>
+            <p class="tagline">15+ years social media management experience building brands, audiences, and communities across web3, DeFi, and consumer products</p>
             <div class="cta-buttons">
                 <a href="https://x.com/BenniDaytime" class="btn btn-primary" target="_blank" rel="noopener noreferrer">DM Me</a>
                 <a href="#experience" class="btn btn-secondary">View Work</a>
@@ -428,13 +508,13 @@
         <div class="about-content">
             <div class="about-text">
                 <p>I'm a crypto-native social media and marketing manager who most recently led social strategy at Risk Labs for Across Protocol and UMA — two of the most innovative protocols in DeFi and prediction markets.</p>
-                <p>My background spans 10+ years building brands and engaged communities. I've promoted within 8 months from Community Manager to Social Media Manager, specializing in translating complex technical concepts into compelling, high-engagement content that resonates with crypto-native audiences.</p>
+                <p>My background spans 15+ years of social media management experience building brands and engaged communities. I've promoted within 8 months from Community Manager to Social Media Manager, specializing in translating complex technical concepts into compelling, high-engagement content that resonates with crypto-native audiences.</p>
                 <p>Beyond traditional marketing, I'm an AI power user who ships demos, POCs, and applications to support product and sales teams. I automate workflows across content creation, design, and analytics to multiply output without sacrificing quality.</p>
             </div>
             <div class="stats">
                 <div class="stat-box">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years Social Media Management</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">5+</div>
@@ -503,6 +583,37 @@
                         Ran marketing campaigns, events, and blog content for DeFi products. Wrote social copy, edited YouTube video, and managed Discord community.
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="across" class="across-section">
+        <div class="container">
+            <h2>Across Protocol Impact</h2>
+            <p class="section-subtitle">Growth and community leadership delivered across the Across Protocol ecosystem.</p>
+            <div class="across-stats">
+                <div class="across-stat-box">
+                    <div class="across-stat-number">60K → 125K</div>
+                    <div class="across-stat-label">Peak Social Followers</div>
+                </div>
+                <div class="across-stat-box">
+                    <div class="across-stat-number">10K → 70K</div>
+                    <div class="across-stat-label">Discord Community Growth</div>
+                </div>
+                <div class="across-stat-box">
+                    <div class="across-stat-number">7+</div>
+                    <div class="across-stat-label">Platforms Managed</div>
+                </div>
+                <div class="across-stat-box">
+                    <div class="across-stat-number">100M+</div>
+                    <div class="across-stat-label">Views on X, Q2 2026</div>
+                </div>
+            </div>
+            <div class="across-highlights">
+                <div class="across-highlight">Managed X, LinkedIn, Facebook, Instagram, Farcaster, Hey, TikTok and more</div>
+                <div class="across-highlight">Community manager of a Discord that grew from 10K to 70K members</div>
+                <div class="across-highlight">Managed DAO communications and proposals</div>
+                <div class="across-highlight">Led the mods team, community team, and ambassador program</div>
             </div>
         </div>
     </section>

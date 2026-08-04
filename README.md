@@ -2,7 +2,7 @@
 
 Social Media Manager & Crypto Marketing Strategist
 
-A clean, modern portfolio site showcasing 10+ years of experience building brands and communities across web3, DeFi, and consumer products.
+A clean, modern portfolio site showcasing 15+ years of social media management experience building brands and communities across web3, DeFi, and consumer products.
 
 ## About
 
