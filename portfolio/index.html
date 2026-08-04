@@ -426,6 +426,43 @@
             font-size: 0.95rem;
         }
 
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 1.8rem;
+            border: 1px solid #f0f0f0;
+        }
+
+        .cert-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-issuer {
+            color: #666;
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        .cert-date {
+            color: #999;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+
+        .cert-id {
+            color: #bbb;
+            font-size: 0.75rem;
+            margin-top: 0.2rem;
+        }
+
         .teams-grid {
             display: flex;
             flex-wrap: wrap;
@@ -563,6 +600,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#teams">Teams</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -749,6 +787,48 @@
                 <a class="team-tag" href="https://x.com/degenda_io" target="_blank" rel="noopener noreferrer">Degenda</a>
                 <a class="team-tag" href="https://x.com/RagdollzNFT" target="_blank" rel="noopener noreferrer">Ragdollz</a>
                 <a class="team-tag" href="https://x.com/SageOnchainXYZ" target="_blank" rel="noopener noreferrer">Sage</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-name">Blockchain: Beyond the Basics</div>
+                    <div class="cert-issuer">National Association of State Boards of Accountancy (NASBA)</div>
+                    <div class="cert-date">Issued May 2024</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">Diploma in Blockchain Technology and Applications</div>
+                    <div class="cert-issuer">Alison</div>
+                    <div class="cert-date">Issued April 2024</div>
+                    <div class="cert-id">Credential ID 2097-39125641</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">Introduction to Decentralized Finance (DeFi)</div>
+                    <div class="cert-issuer">Stone River eLearning</div>
+                    <div class="cert-date">Issued April 2024</div>
+                    <div class="cert-id">Credential ID 5323-39125641</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">Social Media Marketing: Managing Online Communities</div>
+                    <div class="cert-issuer">LinkedIn</div>
+                    <div class="cert-date">Issued April 2024</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">Mini-MBA</div>
+                    <div class="cert-issuer">International Business Management Institute (IBMI)</div>
+                    <div class="cert-date">Issued April 2024</div>
+                    <div class="cert-id">Credential ID 1216211-171-228-6046</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">Later Product Pro</div>
+                    <div class="cert-issuer">Later</div>
+                    <div class="cert-date">Issued March 2023</div>
+                    <div class="cert-id">Credential ID chqfey5zf96m</div>
+                </div>
             </div>
         </div>
     </section>
