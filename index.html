@@ -123,16 +123,18 @@
         }
 
         .pay-circle.wise {
-            background: #000;
+            background: #d7000f;
         }
 
         .pay-circle.usdc {
             background: #2775ca;
         }
 
-        .pay-circle svg {
-            width: 28px;
-            height: 28px;
+        .pay-circle span {
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.72rem;
+            letter-spacing: 0.3px;
         }
 
         footer {
@@ -164,16 +166,11 @@
         <div class="pay-me">
             <h2>Pay Me</h2>
             <div class="pay-buttons">
-                <a class="pay-circle wise" href="https://wise.com/pay/me/benjamind1714" target="_blank" rel="noopener noreferrer" aria-label="Pay with Wise">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3.5v17M16 7.2c0-1.77-1.79-3.2-4-3.2s-4 1.43-4 3.2c0 1.77 1.79 2.62 4 3.2s4 1.43 4 3.2-1.79 3.2-4 3.2-4-1.43-4-3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                <a class="pay-circle wise" href="https://wise.com/pay/me/benjamind1714" target="_blank" rel="noopener noreferrer" aria-label="Pay with Wise (CAD)">
+                    <span>CAD</span>
                 </a>
                 <a class="pay-circle usdc" href="https://www.sageonchain.xyz/send.html?to=0x2610a6dc27423831489842b0325e1dbcc6142408&amp;token=USDC&amp;chain=8453&amp;amount=1&amp;currency=usd&amp;usd=1" target="_blank" rel="noopener noreferrer" aria-label="Pay with USDC">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3.5v2.2M12 18.3v2.2" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
-                        <path d="M15.5 8.7c0-1.5-1.57-2.7-3.5-2.7s-3.5 1.2-3.5 2.7c0 1.5 1.57 2.24 3.5 2.7 1.93.46 3.5 1.2 3.5 2.7 0 1.5-1.57 2.7-3.5 2.7s-3.5-1.2-3.5-2.7" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <span>USDC</span>
                 </a>
             </div>
         </div>
