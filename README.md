@@ -31,7 +31,7 @@ Open `index.html` in your browser to view the portfolio site.
 ## Contact
 
 📧 Email: [benni@daytimex.com](mailto:benni@daytimex.com)  
-📞 Phone: +1 (416) 627-6623  
+🐦 X: [@BenniDaytime](https://x.com/BenniDaytime)  
 🌍 Location: Toronto, Canada
 
 ---
