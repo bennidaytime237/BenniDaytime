@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Day — Social Media Manager & Crypto Marketing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #2c2c2c;
+            background: #ffffff;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #f0f0f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            color: #000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        .hero {
+            background: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .tagline {
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 1px solid #000;
+        }
+
+        .btn-primary {
+            background: #000;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #333;
+            border-color: #333;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #000;
+            border-color: #000;
+        }
+
+        .btn-secondary:hover {
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #000;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 2.5rem;
+        }
+
+        .job-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .job-card:last-child {
+            border-bottom: none;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 2rem;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .job-company {
+            color: #666;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+
+        .job-date {
+            color: #999;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .job-description {
+            color: #555;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .job-description ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .job-description li {
+            margin-bottom: 0.6rem;
+        }
+
+        .skills-section {
+            background: white;
+            padding: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+        }
+
+        .skill-category h3 {
+            font-size: 0.9rem;
+            color: #000;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .skill-tag {
+            background: #f5f5f5;
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+
+        .across-section {
+            background: #0d1210;
+            color: #fff;
+        }
+
+        .across-section h2 {
+            color: #fff;
+        }
+
+        .across-section .section-subtitle {
+            text-align: center;
+            color: #9fb0ac;
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: -2rem auto 3rem;
+        }
+
+        .across-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .across-stat-box {
+            text-align: center;
+            padding: 2rem 1rem;
+            border: 1px solid rgba(109, 248, 217, 0.25);
+            border-radius: 8px;
+            background: rgba(109, 248, 217, 0.04);
+        }
+
+        .across-stat-number {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #6DF8D9;
+        }
+
+        .across-stat-label {
+            color: #9fb0ac;
+            font-size: 0.8rem;
+            margin-top: 0.6rem;
+            letter-spacing: 0.3px;
+        }
+
+        .across-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2.5rem;
+        }
+
+        .across-highlight {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            color: #d8dedc;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .across-highlight::before {
+            content: '';
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #6DF8D9;
+            margin-top: 0.5rem;
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .founder-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 0;
+            border: 1px solid #f0f0f0;
+        }
+
+        .founder-card h3 {
+            color: #000;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .founder-card .role {
+            color: #999;
+            font-size: 0.8rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.3px;
+        }
+
+        .founder-card p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .teams-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            justify-content: center;
+        }
+
+        .team-tag {
+            background: #f5f5f5;
+            color: #333;
+            padding: 0.7rem 1.4rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #eee;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .team-tag:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        footer {
+            background: #f8f8f8;
+            color: #333;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 3rem 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 0.95rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.8rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .across-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .across-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .job-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/" style="text-decoration: none;">← Benjamin Day</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Social Media Manager & Crypto Marketing Strategist</h1>
+            <p class="tagline">15+ years social media management experience building brands, audiences, and communities across web3, DeFi, and consumer products</p>
+            <div class="cta-buttons">
+                <a href="https://x.com/BenniDaytime" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Contact Me</a>
+                <a href="#experience" class="btn btn-secondary">View Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a crypto-native social media and marketing manager who most recently led social strategy at Risk Labs for Across Protocol and UMA — two of the most innovative protocols in DeFi and prediction markets.</p>
+                <p>My background spans 15+ years of social media management experience building brands and engaged communities, specializing in translating complex technical concepts into compelling, high-engagement content that resonates with crypto-native audiences.</p>
+                <p>Beyond traditional marketing, I'm an advanced AI practitioner who builds demos, proofs of concept, and applications to support product and sales teams. I automate workflows across content creation, design, and analytics to increase output without sacrificing quality.</p>
+            </div>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years Social Media Management</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years in DeFi Marketing</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Web3 Projects Grown</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" style="background: white;">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-grid">
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Social Media Manager</div>
+                            <div class="job-company">Risk Labs Foundation — Across Protocol & UMA</div>
+                        </div>
+                        <div class="job-date">Late 2024 – July 2026</div>
+                    </div>
+                    <div class="job-description">
+                        Owned social strategy, brand voice, and content calendars for two DeFi protocols. Planned and executed launch campaigns end-to-end, produced multimedia creative in-house, and translated technical releases into high-engagement content. Built AI-assisted demos and POCs to support sales and product teams.
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Community Manager</div>
+                            <div class="job-company">Risk Labs Foundation — Across Protocol & UMA</div>
+                        </div>
+                        <div class="job-date">April 2024 – Late 2024</div>
+                    </div>
+                    <div class="job-description">
+                        Managed Discord communities for both protocols: moderation, support triage, engagement programming, and community sentiment reporting.
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Social Media Manager</div>
+                            <div class="job-company">Degenda</div>
+                        </div>
+                        <div class="job-date">August 2023 – April 2024</div>
+                    </div>
+                    <div class="job-description">
+                        Owned all copy, creative, and channel strategy. Doubled the brand's social following within the first six weeks, exceeding growth targets.
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Marketing Manager</div>
+                            <div class="job-company">New Order / Synonym Finance</div>
+                        </div>
+                        <div class="job-date">May 2023 – September 2023</div>
+                    </div>
+                    <div class="job-description">
+                        Ran marketing campaigns, events, and blog content for DeFi products. Wrote social copy, edited YouTube video, and managed Discord community.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="across" class="across-section">
+        <div class="container">
+            <h2>Across Protocol Impact</h2>
+            <p class="section-subtitle">Growth and community leadership delivered across the Across Protocol ecosystem.</p>
+            <div class="across-stats">
+                <div class="across-stat-box">
+                    <div class="across-stat-number">60K → 125K</div>
+                    <div class="across-stat-label">Peak Social Followers</div>
+                </div>
+                <div class="across-stat-box">
+                    <div class="across-stat-number">10K → 70K</div>
+                    <div class="across-stat-label">Discord Community Growth</div>
+                </div>
+                <div class="across-stat-box">
+                    <div class="across-stat-number">7+</div>
+                    <div class="across-stat-label">Platforms Managed</div>
+                </div>
+                <div class="across-stat-box">
+                    <div class="across-stat-number">100M+</div>
+                    <div class="across-stat-label">Views on X, Q2 2026</div>
+                </div>
+            </div>
+            <div class="across-highlights">
+                <div class="across-highlight">Managed X, LinkedIn, Facebook, Instagram, Farcaster, Hey, TikTok and more</div>
+                <div class="across-highlight">Community manager of a Discord that grew from 10K to 70K members</div>
+                <div class="across-highlight">Managed DAO communications and proposals</div>
+                <div class="across-highlight">Led the mods team, community team, and ambassador program</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="founder">
+        <div class="container">
+            <h2>Founder Experience</h2>
+            <div class="founder-grid">
+                <div class="founder-card">
+                    <h3>DaytimeX</h3>
+                    <div class="role">Founder & Director · 2016 – Present</div>
+                    <p>Multimedia company spanning music, gaming, merchandise, and digital collectibles. Delivered marketing and consultation for web3 brands including NFT NYC.</p>
+                </div>
+                <div class="founder-card">
+                    <h3>Divizion</h3>
+                    <div class="role">Founder & Director · 2022 – Present</div>
+                    <p>Ethical streetwear brand pairing physical products with digital collectibles, including charity NFT collaborations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teams">
+        <div class="container">
+            <h2>Web3 Teams I've Worked With</h2>
+            <div class="teams-grid">
+                <a class="team-tag" href="https://x.com/AcrossProtocol" target="_blank" rel="noopener noreferrer">Across</a>
+                <a class="team-tag" href="https://x.com/UMAprotocol" target="_blank" rel="noopener noreferrer">UMA</a>
+                <a class="team-tag" href="https://x.com/RiskLabsFDN" target="_blank" rel="noopener noreferrer">Risk Labs</a>
+                <a class="team-tag" href="https://x.com/neworderDAO" target="_blank" rel="noopener noreferrer">New Order</a>
+                <a class="team-tag" href="https://x.com/synofinance" target="_blank" rel="noopener noreferrer">Synonym Finance</a>
+                <a class="team-tag" href="https://x.com/grass" target="_blank" rel="noopener noreferrer">Grass</a>
+                <a class="team-tag" href="https://x.com/NFT_NYC" target="_blank" rel="noopener noreferrer">NFT NYC</a>
+                <a class="team-tag" href="https://x.com/ChibiDinosNFT" target="_blank" rel="noopener noreferrer">Chibi Dinos</a>
+                <a class="team-tag" href="https://x.com/T1MLivingston" target="_blank" rel="noopener noreferrer">LivingBots</a>
+                <a class="team-tag" href="https://x.com/degenda_io" target="_blank" rel="noopener noreferrer">Degenda</a>
+                <a class="team-tag" href="https://x.com/RagdollzNFT" target="_blank" rel="noopener noreferrer">Ragdollz</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background: white;">
+        <div class="container">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-section">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Marketing & Strategy</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Social Media Strategy</span>
+                            <span class="skill-tag">Content Marketing</span>
+                            <span class="skill-tag">Copywriting</span>
+                            <span class="skill-tag">Campaign Management</span>
+                            <span class="skill-tag">Brand Development</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Community & Growth</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Community Management</span>
+                            <span class="skill-tag">Discord & Telegram</span>
+                            <span class="skill-tag">X (Twitter) Growth</span>
+                            <span class="skill-tag">Partnership Marketing</span>
+                            <span class="skill-tag">Product Launches</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Creative & Production</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Graphic Design</span>
+                            <span class="skill-tag">Video Editing</span>
+                            <span class="skill-tag">Motion Graphics</span>
+                            <span class="skill-tag">Social Analytics</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Web3 & Crypto</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">DeFi Marketing</span>
+                            <span class="skill-tag">Crypto Marketing</span>
+                            <span class="skill-tag">Prediction Markets</span>
+                            <span class="skill-tag">Cross-Chain Interoperability</span>
+                            <span class="skill-tag">Oracles</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>AI & Automation</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AI-Assisted Development</span>
+                            <span class="skill-tag">Demos & POCs</span>
+                            <span class="skill-tag">Workflow Automation</span>
+                            <span class="skill-tag">Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: white;">
+        <div class="container" style="text-align: center;">
+            <h2>Let's Connect</h2>
+            <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">I welcome conversations about crypto, social strategy, and building communities with lasting impact.</p>
+            <div class="cta-buttons">
+                <a href="mailto:benni@daytimex.com" class="btn btn-primary">Email Me</a>
+                <a href="https://x.com/BenniDaytime" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Message on X</a>
+                <a href="https://www.linkedin.com/in/bennidaytime/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <a href="mailto:benni@daytimex.com">benni@daytimex.com</a>
+                <a href="https://x.com/BenniDaytime" target="_blank" rel="noopener noreferrer">@BenniDaytime</a>
+                <a href="https://www.linkedin.com/in/bennidaytime/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <div class="footer-note">
+                <p>Toronto, Canada · Social Media Manager &amp; Crypto Marketing Strategist</p>
+                <p style="margin-top: 1rem; opacity: 0.7;">© 2026 Benjamin Day. Built with static HTML/CSS.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

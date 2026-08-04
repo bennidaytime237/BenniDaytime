@@ -1,8 +1,9 @@
-# Benjamin Day — Portfolio
+# Benjamin Day
 
 Social Media Manager & Crypto Marketing Strategist
 
-A clean, modern portfolio site showcasing 15+ years of social media management experience building brands and communities across web3, DeFi, and consumer products.
+- `/` — a simple link-in-bio homepage with a short bio and social links.
+- `/portfolio` — the full portfolio site showcasing 15+ years of social media management experience building brands and communities across web3, DeFi, and consumer products. Not linked from the homepage or any menu — direct link only.
 
 ## About
 
@@ -26,7 +27,7 @@ Social Media Strategy · Content Marketing · Copywriting · Community Managemen
 
 ## View the Portfolio
 
-Open `index.html` in your browser to view the portfolio site.
+Open `index.html` for the homepage, or `portfolio/index.html` for the full portfolio site.
 
 ## Contact
 
