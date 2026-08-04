@@ -30,10 +30,10 @@ Open `index.html` in your browser to view the portfolio site.
 
 ## Contact
 
-📧 Email: [benni@daytimex.com](mailto:benni@daytimex.com)  
-🐦 X: [@BenniDaytime](https://x.com/BenniDaytime)  
-💼 LinkedIn: [bennidaytime](https://www.linkedin.com/in/bennidaytime/)  
-🌍 Location: Toronto, Canada
+Email: [benni@daytimex.com](mailto:benni@daytimex.com)  
+X: [@BenniDaytime](https://x.com/BenniDaytime)  
+LinkedIn: [bennidaytime](https://www.linkedin.com/in/bennidaytime/)  
+Location: Toronto, Canada
 
 ---
 
