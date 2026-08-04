@@ -1,6 +1,6 @@
 # Benjamin Day
 
-Social Media Manager & Crypto Marketing Strategist
+Social Media Manager & Web3 Marketing Strategist
 
 - `/` — a simple link-in-bio homepage with a short bio and social links.
 - `/portfolio` — the full portfolio site showcasing 15+ years of social media management experience building brands and communities across web3, DeFi, and consumer products. Not linked from the homepage or any menu — direct link only.
