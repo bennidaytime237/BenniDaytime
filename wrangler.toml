@@ -1,0 +1,5 @@
+name = "benjamin-day-portfolio"
+type = "javascript"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
