@@ -89,6 +89,64 @@
             border-color: #333;
         }
 
+        .pay-me {
+            margin-top: 2.2rem;
+        }
+
+        .pay-me h2 {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 0.9rem;
+        }
+
+        .pay-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .pay-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.65rem 1.4rem;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        }
+
+        .pay-circle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .pay-circle.wise {
+            background: #000;
+        }
+
+        .pay-circle.usdc {
+            background: #fff;
+            border: 1.5px solid #000;
+        }
+
+        .pay-circle.wise span {
+            color: #fff;
+        }
+
+        .pay-circle.usdc span {
+            color: #000;
+        }
+
+        .pay-circle span {
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.5px;
+        }
+
         footer {
             margin-top: 3rem;
             color: #aaa;
@@ -113,6 +171,18 @@
             <a class="link" href="https://www.tiktok.com/@bennidaytime" target="_blank" rel="noopener noreferrer">TikTok</a>
             <a class="link" href="https://www.twitch.tv/bennidaytime" target="_blank" rel="noopener noreferrer">Twitch</a>
             <a class="link" href="mailto:benni@daytimex.com">Email</a>
+        </div>
+
+        <div class="pay-me">
+            <h2>Pay Me</h2>
+            <div class="pay-buttons">
+                <a class="pay-circle wise" href="https://wise.com/pay/me/benjamind1714" target="_blank" rel="noopener noreferrer" aria-label="Pay with Wise (Fiat)">
+                    <span>FIAT</span>
+                </a>
+                <a class="pay-circle usdc" href="https://www.sageonchain.xyz/send.html?to=0x2610a6dc27423831489842b0325e1dbcc6142408&amp;token=USDC&amp;chain=8453&amp;amount=1&amp;currency=usd&amp;usd=1" target="_blank" rel="noopener noreferrer" aria-label="Pay with Crypto (USDC)">
+                    <span>CRYPTO</span>
+                </a>
+            </div>
         </div>
 
         <footer>
