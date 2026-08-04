@@ -404,6 +404,38 @@
             background: #6DF8D9;
         }
 
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .work-grid a {
+            display: block;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .work-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .work-grid a:hover img {
+            transform: scale(1.05);
+        }
+
+        .work-empty {
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
         .founder-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -610,6 +642,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#work">Work</a></li>
                 <li><a href="#teams">Teams</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -760,6 +793,32 @@
             </div>
         </div>
     </section>
+
+    <section id="work" style="background: white;">
+        <div class="container">
+            <h2>Twitter Graphics</h2>
+            <div class="work-grid" id="work-grid"></div>
+        </div>
+    </section>
+
+    <script>
+        fetch('../images/twitter-graphics/manifest.json')
+            .then(res => res.json())
+            .then(files => {
+                const grid = document.getElementById('work-grid');
+                if (!files.length) {
+                    grid.innerHTML = '<p class="work-empty">More work samples coming soon.</p>';
+                    return;
+                }
+                grid.innerHTML = files.map(file => {
+                    const src = `../images/twitter-graphics/${file}`;
+                    return `<a href="${src}" target="_blank" rel="noopener noreferrer"><img src="${src}" alt="Twitter graphic sample" loading="lazy"></a>`;
+                }).join('');
+            })
+            .catch(() => {
+                document.getElementById('work-grid').innerHTML = '<p class="work-empty">More work samples coming soon.</p>';
+            });
+    </script>
 
     <section id="founder">
         <div class="container">
