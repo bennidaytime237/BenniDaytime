@@ -110,9 +110,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
+            padding: 0.65rem 1.4rem;
+            border-radius: 999px;
             text-decoration: none;
             transition: transform 0.15s ease, box-shadow 0.15s ease;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
@@ -124,18 +123,26 @@
         }
 
         .pay-circle.wise {
-            background: #d7000f;
+            background: #000;
         }
 
         .pay-circle.usdc {
-            background: #2775ca;
+            background: #fff;
+            border: 1.5px solid #000;
+        }
+
+        .pay-circle.wise span {
+            color: #fff;
+        }
+
+        .pay-circle.usdc span {
+            color: #000;
         }
 
         .pay-circle span {
-            color: #fff;
             font-weight: 700;
-            font-size: 0.72rem;
-            letter-spacing: 0.3px;
+            font-size: 0.78rem;
+            letter-spacing: 0.5px;
         }
 
         footer {
@@ -167,11 +174,11 @@
         <div class="pay-me">
             <h2>Pay Me</h2>
             <div class="pay-buttons">
-                <a class="pay-circle wise" href="https://wise.com/pay/me/benjamind1714" target="_blank" rel="noopener noreferrer" aria-label="Pay with Wise (CAD)">
-                    <span>CAD</span>
+                <a class="pay-circle wise" href="https://wise.com/pay/me/benjamind1714" target="_blank" rel="noopener noreferrer" aria-label="Pay with Wise (Fiat)">
+                    <span>FIAT</span>
                 </a>
-                <a class="pay-circle usdc" href="https://www.sageonchain.xyz/send.html?to=0x2610a6dc27423831489842b0325e1dbcc6142408&amp;token=USDC&amp;chain=8453&amp;amount=1&amp;currency=usd&amp;usd=1" target="_blank" rel="noopener noreferrer" aria-label="Pay with USDC">
-                    <span>USDC</span>
+                <a class="pay-circle usdc" href="https://www.sageonchain.xyz/send.html?to=0x2610a6dc27423831489842b0325e1dbcc6142408&amp;token=USDC&amp;chain=8453&amp;amount=1&amp;currency=usd&amp;usd=1" target="_blank" rel="noopener noreferrer" aria-label="Pay with Crypto (USDC)">
+                    <span>CRYPTO</span>
                 </a>
             </div>
         </div>
