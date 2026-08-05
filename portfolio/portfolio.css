@@ -56,6 +56,17 @@ nav {
     gap: 1.5rem;
 }
 
+/* On desktop the wrapper dissolves so the nav lays out as
+   logo | menu | theme toggle; under 768px it becomes the top row. */
+.nav-top {
+    display: contents;
+}
+
+.theme-mount {
+    order: 3;
+    flex: 0 0 auto;
+}
+
 .logo {
     display: inline-flex;
     align-items: center;
@@ -87,11 +98,15 @@ nav {
     transform: translateX(-2px);
 }
 
-/* Horizontal, scrollable menu that never pushes the page wide */
+/* Horizontal, scrollable menu that never pushes the page wide. Sized to its
+   content and pushed right by the auto margin — right-aligning with
+   justify-content instead would push the overflow off the left edge, where
+   scrolling can't reach it. */
 .nav-scroller {
     position: relative;
     min-width: 0;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
+    margin-left: auto;
 }
 
 .nav-scroller::before,
@@ -124,10 +139,10 @@ nav {
 
 .nav-links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    gap: 0.35rem;
     list-style: none;
+    gap: 0.2rem;
     overflow-x: auto;
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
@@ -145,9 +160,9 @@ nav {
     scroll-snap-align: center;
     text-decoration: none;
     color: var(--ink-3);
-    font-size: 0.85rem;
+    font-size: 0.83rem;
     font-weight: 500;
-    padding: 0.5rem 0.7rem;
+    padding: 0.5rem 0.62rem;
     border-radius: 999px;
     transition: color 0.2s, background 0.2s;
 }
@@ -968,13 +983,25 @@ footer {
         padding: 0.6rem 1rem 0.55rem;
     }
 
+    .nav-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+    }
+
     .logo {
-        align-self: flex-start;
         font-size: 1rem;
     }
 
+    /* Stacked layout: the menu spans the full row rather than being
+       pushed right and sized to its content. */
+    .nav-scroller {
+        margin-left: 0;
+        width: 100%;
+    }
+
     .nav-links {
-        justify-content: flex-start;
         gap: 0.25rem;
         padding-bottom: 0.15rem;
     }

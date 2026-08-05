@@ -5,24 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Benjamin Day</title>
     <meta name="description" content="Benjamin Day — Social Media Manager & Web3 Marketing Strategist. Links and contact.">
-    <meta name="theme-color" content="#f7f7f6" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#15171a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f7f7f6">
     <link rel="canonical" href="https://bennidaytime.com/">
+    <!-- Applies a saved theme choice before first paint, so there's no flash -->
+    <script>
+        (function () {
+            try {
+                var m = localStorage.getItem('theme');
+                if (m === 'light' || m === 'dark') document.documentElement.setAttribute('data-theme', m);
+            } catch (e) {}
+        })();
+    </script>
 
     <meta property="og:type" content="profile">
     <meta property="og:site_name" content="Benjamin Day">
     <meta property="og:title" content="Benjamin Day">
     <meta property="og:description" content="Social Media Manager &amp; Web3 Marketing Strategist. 15+ years building brands, audiences, and communities across web3, DeFi, and consumer products.">
     <meta property="og:url" content="https://bennidaytime.com/">
-    <meta property="og:image" content="https://bennidaytime.com/images/profile.jpg">
-    <meta property="og:image:alt" content="Benjamin Day">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://bennidaytime.com/images/og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Benjamin Day — @BenniDaytime — Web3 Marketing Strategist">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@BenniDaytime">
     <meta name="twitter:creator" content="@BenniDaytime">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="home.css">
+    <script src="theme.js" defer></script>
 </head>
 <body>
     <div class="card">
@@ -57,6 +69,8 @@
             <p>&copy; 2026 Benjamin Day</p>
             <p><a class="footer-link" href="portfolio/">Portfolio</a></p>
         </footer>
+
+        <div class="theme-mount" data-theme-mount></div>
     </div>
 </body>
 </html>

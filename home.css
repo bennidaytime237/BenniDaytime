@@ -185,6 +185,12 @@ footer {
     color: var(--ink);
 }
 
+.theme-mount {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.75rem;
+}
+
 @media (max-width: 380px) {
     body {
         padding: 2rem 1rem;

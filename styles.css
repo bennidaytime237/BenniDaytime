@@ -27,8 +27,13 @@
     color-scheme: light dark;
 }
 
+/* Dark palette.
+   Two selectors carry the same values on purpose: the media query is the
+   default "follow the device" behaviour and works with JS disabled, while
+   the attribute is set by the theme toggle when someone picks a theme
+   explicitly. Edit them together. */
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
         --bg: #15171a;
         --surface: #1c1f24;
         --surface-alt: #24282e;
@@ -42,6 +47,30 @@
         --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
         --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.5);
     }
+}
+
+:root[data-theme="dark"] {
+    --bg: #15171a;
+    --surface: #1c1f24;
+    --surface-alt: #24282e;
+    --ink: #edeff2;
+    --ink-2: #d2d6dc;
+    --ink-3: #aeb4bc;
+    --muted: #8d949d;
+    --line: #2f343b;
+    --line-soft: #282c33;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Also tells the browser which way to render scrollbars and form controls */
+:root[data-theme="light"] {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
 }
 
 * {
@@ -73,6 +102,78 @@ a {
     outline: 2px solid var(--ink);
     outline-offset: 3px;
     border-radius: 4px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ---------- Theme toggle ----------
+   Rendered by theme.js, so it never appears as a dead control when
+   JavaScript is unavailable — the page still follows the device there. */
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 999px;
+}
+
+.theme-toggle input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.theme-toggle label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 30px;
+    border-radius: 999px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle label:hover {
+    color: var(--ink);
+    background: var(--surface-alt);
+}
+
+.theme-toggle input:checked + label {
+    color: var(--surface);
+    background: var(--ink);
+}
+
+.theme-toggle input:focus-visible + label {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+}
+
+.theme-toggle svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 @media (prefers-reduced-motion: reduce) {
