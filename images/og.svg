@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Benjamin Day Open Graph image</title>
+  <desc id="desc">Off-white card with off-black text reading Benjamin Day, @BenniDaytime, and Web3 Marketing Strategist, beside a circular portrait.</desc>
+
+  <defs>
+    <clipPath id="portrait-clip">
+      <circle cx="992" cy="315" r="128"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="#F5F2EB"/>
+
+  <!-- Portrait balances the text block and makes the card recognisable in a feed -->
+  <image href="profile.jpg" xlink:href="profile.jpg"
+         x="864" y="187" width="256" height="256"
+         preserveAspectRatio="xMidYMid slice"
+         clip-path="url(#portrait-clip)"/>
+  <circle cx="992" cy="315" r="128" fill="none" stroke="#1C1C1A" stroke-opacity="0.14"/>
+
+  <g fill="#1C1C1A">
+    <text x="80" y="288"
+          font-family="Georgia, 'Charter', 'Times New Roman', serif"
+          font-size="126"
+          font-weight="700"
+          letter-spacing="-5">Benjamin Day</text>
+
+    <text x="82" y="356"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="44"
+          font-weight="500"
+          letter-spacing="-1">@BenniDaytime</text>
+  </g>
+
+  <line x1="82" y1="394" x2="382" y2="394" stroke="#1C1C1A" stroke-opacity="0.22" stroke-width="2"/>
+
+  <text x="84" y="444"
+        fill="#1C1C1A"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="30"
+        font-weight="400"
+        letter-spacing="2">Web3 Marketing Strategist</text>
+
+  <text x="84" y="556"
+        fill="#1C1C1A" fill-opacity="0.55"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22"
+        font-weight="400"
+        letter-spacing="1.5">bennidaytime.com</text>
+</svg>

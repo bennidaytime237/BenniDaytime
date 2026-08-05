@@ -29,6 +29,19 @@ Social Media Strategy · Content Marketing · Copywriting · Community Managemen
 
 Open `index.html` for the homepage, or `portfolio/index.html` for the full portfolio site.
 
+## Files
+
+| File | Purpose |
+| --- | --- |
+| `styles.css` | Colour tokens (light + dark), reset, base type — shared by both pages |
+| `home.css` | Link-in-bio homepage styles |
+| `portfolio/portfolio.css` | Portfolio page styles |
+
+Colours are CSS custom properties defined once at the top of `styles.css`, with a
+`prefers-color-scheme: dark` block overriding the same names — so retheming either
+mode means editing one list of values. The palette deliberately avoids pure white
+and pure black.
+
 ## Contact
 
 Email: [benni@daytimex.com](mailto:benni@daytimex.com)  

@@ -1,0 +1,207 @@
+/* Link-in-bio homepage. Shared tokens and reset come from styles.css. */
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.25rem;
+}
+
+:focus-visible {
+    border-radius: 6px;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    display: block;
+    border: 1px solid var(--line);
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin-bottom: 0.3rem;
+    color: var(--ink);
+}
+
+.aka {
+    color: var(--muted);
+    font-size: 0.78rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.9rem;
+}
+
+.bio {
+    color: var(--ink-3);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2.2rem;
+    text-wrap: pretty;
+}
+
+/* keeps the three bio lines reading as separate thoughts */
+.bio br {
+    content: "";
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0.85rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.link:hover {
+    background: var(--ink);
+    color: var(--surface);
+    border-color: var(--ink);
+}
+
+.link:active {
+    transform: translateY(1px);
+}
+
+.link.primary {
+    background: var(--ink);
+    color: var(--surface);
+    border-color: var(--ink);
+}
+
+.link.primary:hover {
+    background: var(--ink-2);
+    border-color: var(--ink-2);
+}
+
+.pay-me {
+    margin-top: 2.2rem;
+}
+
+.pay-me h2 {
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.9rem;
+}
+
+.pay-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+}
+
+.pay-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.65rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1.5px solid var(--ink);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.pay-circle:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.pay-circle:active {
+    transform: translateY(0);
+}
+
+.pay-circle.wise {
+    background: var(--ink);
+}
+
+.pay-circle.usdc {
+    background: var(--surface);
+}
+
+.pay-circle.wise span {
+    color: var(--surface);
+}
+
+.pay-circle.usdc span {
+    color: var(--ink);
+}
+
+.pay-circle span {
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+}
+
+footer {
+    margin-top: 2.75rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.8;
+}
+
+.footer-link {
+    color: var(--ink-3);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    display: inline-block;
+    padding: 0.35rem 0.25rem;
+}
+
+.footer-link:hover {
+    color: var(--ink);
+}
+
+.theme-mount {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.75rem;
+}
+
+@media (max-width: 380px) {
+    body {
+        padding: 2rem 1rem;
+    }
+
+    .bio {
+        font-size: 0.9rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .pay-buttons {
+        gap: 0.6rem;
+    }
+}
