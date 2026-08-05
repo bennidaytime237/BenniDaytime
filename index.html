@@ -2,26 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Benjamin Day</title>
     <meta name="description" content="Benjamin Day — Social Media Manager & Web3 Marketing Strategist. Links and contact.">
+    <meta name="theme-color" content="#f7f7f6">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
+        :root {
+            /* Neutrals — deliberately off pure white / pure black */
+            --bg: #f7f7f6;
+            --surface: #fcfcfb;
+            --surface-alt: #f1f1ef;
+            --ink: #15171a;
+            --ink-2: #33373d;
+            --ink-3: #55595f;
+            --muted: #83878d;
+            --line: #e4e4e0;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: #2c2c2c;
-            background: #ffffff;
+            color: var(--ink-2);
+            background: var(--bg);
             min-height: 100vh;
+            min-height: 100svh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 1.25rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--ink);
+            outline-offset: 3px;
+            border-radius: 6px;
         }
 
         .card {
@@ -37,6 +62,7 @@
             object-fit: cover;
             margin: 0 auto 1.5rem;
             display: block;
+            border: 1px solid var(--line);
         }
 
         h1 {
@@ -44,23 +70,25 @@
             font-weight: 600;
             letter-spacing: -0.3px;
             margin-bottom: 0.3rem;
-            color: #000;
+            color: var(--ink);
         }
 
         .aka {
-            color: #999;
-            font-size: 0.75rem;
-            text-align: center;
-            margin-bottom: 0.8rem;
+            color: var(--muted);
+            font-size: 0.78rem;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.9rem;
         }
 
         .bio {
-            color: #666;
+            color: var(--ink-3);
             font-size: 0.95rem;
             line-height: 1.7;
             margin-bottom: 2.2rem;
+            text-wrap: pretty;
         }
 
+        /* keeps the three bio lines reading as separate thoughts */
         .bio br {
             content: "";
             display: block;
@@ -70,36 +98,44 @@
         .links {
             display: flex;
             flex-direction: column;
-            gap: 0.85rem;
+            gap: 0.7rem;
         }
 
         .link {
-            display: block;
-            padding: 0.9rem 1.5rem;
-            border: 1px solid #e5e5e5;
-            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            padding: 0.85rem 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 10px;
             text-decoration: none;
-            color: #000;
+            color: var(--ink);
             font-weight: 500;
             font-size: 0.95rem;
-            transition: all 0.2s ease;
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
         }
 
         .link:hover {
-            background: #000;
-            color: #fff;
-            border-color: #000;
+            background: var(--ink);
+            color: var(--surface);
+            border-color: var(--ink);
+        }
+
+        .link:active {
+            transform: translateY(1px);
         }
 
         .link.primary {
-            background: #000;
-            color: #fff;
-            border-color: #000;
+            background: var(--ink);
+            color: var(--surface);
+            border-color: var(--ink);
         }
 
         .link.primary:hover {
-            background: #333;
-            border-color: #333;
+            background: var(--ink-2);
+            border-color: var(--ink-2);
         }
 
         .pay-me {
@@ -107,51 +143,57 @@
         }
 
         .pay-me h2 {
-            font-size: 0.78rem;
+            font-size: 0.76rem;
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: #999;
+            color: var(--muted);
             margin-bottom: 0.9rem;
         }
 
         .pay-buttons {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.85rem;
         }
 
         .pay-circle {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 0.65rem 1.4rem;
+            min-height: 44px;
+            padding: 0.65rem 1.5rem;
             border-radius: 999px;
             text-decoration: none;
+            border: 1.5px solid var(--ink);
             transition: transform 0.15s ease, box-shadow 0.15s ease;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1px 3px rgba(21, 23, 26, 0.12);
         }
 
         .pay-circle:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(21, 23, 26, 0.18);
+        }
+
+        .pay-circle:active {
+            transform: translateY(0);
         }
 
         .pay-circle.wise {
-            background: #000;
+            background: var(--ink);
         }
 
         .pay-circle.usdc {
-            background: #fff;
-            border: 1.5px solid #000;
+            background: var(--surface);
         }
 
         .pay-circle.wise span {
-            color: #fff;
+            color: var(--surface);
         }
 
         .pay-circle.usdc span {
-            color: #000;
+            color: var(--ink);
         }
 
         .pay-circle span {
@@ -161,28 +203,52 @@
         }
 
         footer {
-            margin-top: 3rem;
-            color: #aaa;
+            margin-top: 2.75rem;
+            color: var(--muted);
             font-size: 0.78rem;
-        }
-
-        footer p {
-            margin-top: 0.3rem;
+            line-height: 1.8;
         }
 
         .footer-link {
-            color: #aaa;
+            color: var(--ink-3);
             text-decoration: underline;
+            text-underline-offset: 2px;
+            display: inline-block;
+            padding: 0.35rem 0.25rem;
         }
 
         .footer-link:hover {
-            color: #fff;
+            color: var(--ink);
+        }
+
+        @media (max-width: 380px) {
+            body {
+                padding: 2rem 1rem;
+            }
+
+            .bio {
+                font-size: 0.9rem;
+                margin-bottom: 1.8rem;
+            }
+
+            .pay-buttons {
+                gap: 0.6rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <img class="avatar" src="images/profile.jpg" alt="Benjamin Day">
+        <img class="avatar" src="images/profile.jpg" alt="Benjamin Day" width="96" height="96">
         <h1>Benjamin Day</h1>
         <p class="aka">AKA: BenniDaytime</p>
         <p class="bio">Social Media Manager &amp; Web3 Marketing Strategist.<br>15+ years building brands, audiences, and communities across web3, DeFi, and consumer products.<br>Based in Toronto, Canada.</p>
